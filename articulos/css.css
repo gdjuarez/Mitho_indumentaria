@@ -1,0 +1,21 @@
+#idArticulo{
+    width:100%;
+    float:right;
+}
+
+#Descripcion{
+    width:100%;
+    float:right;
+}
+
+#imput-group{
+    width:100%;
+}
+
+#estilo{
+    background:rgba(201, 158, 66, 0.350);
+}
+
+#Edit{
+    text-align: center;
+}
