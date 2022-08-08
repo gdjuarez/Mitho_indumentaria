@@ -71,30 +71,30 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 				 </div>
 			</div>
 			<div class="col-md-3 border rounded bg-primary">
-				<h5 class="text-white">Entregas</h5>
+				<h5 class="text-white">Ingreso</h5>
 				<div class="list-group p-2">
-					<a href="#" class="list-group-item list-group-item-action">Venta</a>		
-					<a href="#" class="list-group-item list-group-item-action">Listar ventas</a>								
-					<a href="#" class="list-group-item list-group-item-action text-white">.</a>					
-					<a href="../stock/StockManager.php" class="list-group-item list-group-item-action">Stock Manager</a>
+				<a href="../ingreso/nuevoingreso/nuevo.php" class="list-group-item list-group-item-action">Nuevo Ingreso</a>
+				<a href="#" class="list-group-item list-group-item-action text-white">.</a>			
+					<a href="../ingreso/listadoingresos.php" class="list-group-item list-group-item-action">Listar ingresos</a>
+						
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>					
 		     	</div>
 			</div>
 			<div class="col-md-3 border rounded bg-primary">
-			<h5 class="text-white">Ingreso</h5>
-				<div class="list-group p-2">				
-					<a href="../ingreso/nuevoingreso/nuevo.php" class="list-group-item list-group-item-action">Nuevo Ingreso</a>
-					<a href="../ingreso/listadoingresos.php" class="list-group-item list-group-item-action">Listar ingresos</a>
-					<a href="#" class="list-group-item list-group-item-action text-white">.</a>						
+			<h5 class="text-white">Articulos & Precios</h5>
+				<div class="list-group p-2">			
 					<a href="../articulos/articulos.php" class="list-group-item list-group-item-action">Articulos</a>
-					<a href="../precios/precioManager.php" class="list-group-item list-group-item-action">Actualizar Precios</a>	
+					<a href="#" class="list-group-item list-group-item-action text-white">.</a>				
+					<a href="../precios/precioManager.php" class="list-group-item list-group-item-action">Actualizar Precios</a>
+					<a href="#" class="list-group-item list-group-item-action text-white">.</a>				
+					
 		     	</div>
 	      	</div>
 			  <div class="col-md-3 border rounded bg-primary">
-			<h5 class="text-white">Caja</h5>
+			<h5 class="text-white">Inventario</h5>
 				<div class="list-group p-2">				
-					<a href="../caja/caja.php" class="list-group-item list-group-item-action">Caja</a>	
-					<a href="../caja/cabeceraCajaentrefechas.php" class="list-group-item list-group-item-action">Informe de caja</a>					
+				<a href="../stock/StockManager.php" class="list-group-item list-group-item-action">Stock Manager</a>
+								
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>						
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>		
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>			
@@ -123,7 +123,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 		</div>
 		<hr>
 		<footer>
-            <small>&copy; Copyright GiFSys 2021</small>
+            <small>&copy; Copyright GDJuarez 2022</small>
         </footer>
 	</div>
     <!-- Option 1: Bootstrap Bundle (includes Popper) -->  
