@@ -1,17 +1,8 @@
 <?php
-/*
-    $db_host="localhost";
-    $db_nombre="id17213126_madera";
-    $db_usuario="id17213126_gdj";
-    $db_contra="Lau20526866&";
- */
-    $db_host="localhost";
-    $db_nombre="comercio_web";
-    $db_usuario="root";
-    $db_contra="";
   
+  require_once('config.php');
     
-    $miConexion = mysqli_connect( $db_host,  $db_usuario, $db_contra,$db_nombre);
+    $miConexion = mysqli_connect( $db_host, $db_usuario, $db_contra,$db_nombre);
     
     if (!$miConexion) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;

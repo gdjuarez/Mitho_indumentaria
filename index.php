@@ -16,12 +16,12 @@
     <body>
         <p>
         <div class="container bg-light">              
-            <div class="row bg-primary rounded"> 
-                <div class="col-12  "><h2 class="text-center">Punto de Venta</h2></div>           
+            <div class="row bg-dark rounded"> 
+                <div class="col-12  "><h2 class="text-center text-white">MITHO - Indumentaria</h2></div>           
             </div>  
             <div class="row m-5 "> 
                 <div class="col-md-4">   
-                    <img class=" img-fluid center-block" src="img/SuLogoAqui.png" >          
+                    <img class=" img-fluid center-block" src="img/mitho_logo.jpeg" >          
                 </div>
                 <div class="col-md-4 border rounded border-dark">
                     <form class="form-inline" action="conex/login.php" method="post">
@@ -49,12 +49,12 @@
                     </form>                                   
                 </div>                
                 <div class="col-md-4">
-                    <img class=" img-fluid center-block" src="img/logogdj.jpg" >  
+                   
                 </div>
             </div>
             <HR>
             <footer>
-                <small>&copy; Copyright GiFSys 2021</small>
+                <small>&copy; Copyright GDJuarez 2022</small>
             </footer>
         </div>
     </body>
