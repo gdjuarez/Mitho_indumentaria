@@ -28,7 +28,7 @@ function Footer()
    //Subtotales y total
    $this->SetY(-21);
    //Ingreso total
-   $this->Cell(190, 15, ' Comprobante no valido como factura (presupuesto valido por 7 dias desde la fecha de emision) ', 1,0,'C');
+   $this->Cell(190, 15, ' Comprobante no valido como factura (presupuesto valido para la fecha de emision) NO INCLUYE FLETE ', 1,0,'C');
    $this->Ln(5);
 }
 }
@@ -110,15 +110,15 @@ $pdf->Ln(0);
 $pdf->Cell(5, 10, '', 0);
 $pdf->Cell(10, 10, 'Cuil:', 0);
 $pdf->SetFont('times', '', 12);
-$pdf->Cell(85, 10, $cliente, 0);
+$pdf->Cell(35, 10, $cliente, 0); //85,10
 $pdf->SetFont('times', 'B', 12);
-$pdf->Cell(24, 10, 'Razon Social:  ', 0);
+$pdf->Cell(30, 10, 'Razon Social:  ', 0);//24,10
 $pdf->SetFont('times', '', 12);
-$pdf->Cell(60, 10, $RazonSocialCliente, 0);
+$pdf->Cell(80, 10, $RazonSocialCliente, 0);  //10
 $pdf->SetFont('times', 'B', 12);
 $pdf->Ln(5);
 $pdf->Cell(5, 10, '', 0);
-$pdf->Cell(20, 10, 'Domicilio:', 0);
+$pdf->Cell(20, 10, 'domicilio', 0); //'domicilio'
 $pdf->SetFont('times', '', 12);
 $pdf->Cell(120, 10, utf8_decode($Domicilio), 0);
 $pdf->SetFont('times', 'B', 12);

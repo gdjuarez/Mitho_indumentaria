@@ -186,25 +186,34 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 						</div>								
 					</div>
 
-					<div class="form-row">
-						<div class="col">
+					<div class="form-row">						
+						<div class="col-12">
+							<div class="input-group">
+							  	<span class=" ">Razon social : </span>
+							  	<input type="text"  maxlength="90" class="form-control input-lg  text-center text-body" id="entity-social" name="entity-social"   placeholder="si no es cliente puede ingresar: (Apellido - Domicilio -Telefono)"  >
+							</div>
+						</div>
+					</div>
+					<div class="form-row">								
+						<div class="col-7">
 							<div class="input-group">
 							  	<span class="form-control input-sm">CUIL/CUIT</span>
 							  	<input type="text" class="form-control input-sm" id="entity-id" name="entity-id" readonly >
 							</div>  
-						</div>
-						<div class="col">
-							<div class="input-group">
-							  	<span class="form-control input-sm">Razon social</span>
-							  	<input type="text" class="form-control input-sm" id="entity-social" name="entity-social" readonly>
-							</div>
-						</div>
-						<div class="col">					
+						</div>	
+						<div class="col-4">			
 							<div class="input-group">
 							  	<span class="form-control input-sm">Direccion</span>
-							  	<input type="text" class="form-control input-lg" id="entity-domicilio" name="entity-domicilio" readonly>
+							  	<input type="text" class="form-control input-lg" id="entity-domicilio" name="entity-domicilio"readonly >
 							</div>
-						</div>					
+						</div>		
+						<div class="col-1">					
+							<div class="input-group" hidden>
+							  	<span class="form-control input-sm"></span>
+							  	<input type="text" class="form-control input-lg"  >
+							</div>
+						</div>		
+					
 					</div>
 				</form>
 
