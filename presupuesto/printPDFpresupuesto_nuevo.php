@@ -28,7 +28,7 @@ function Footer()
    //Subtotales y total
    $this->SetY(-21);
    //Ingreso total
-   $this->Cell(190, 15, ' Comprobante no valido como factura (presupuesto valido para la fecha de emision) NO INCLUYE FLETE ', 1,0,'C');
+   $this->Cell(190, 15, ' Comprobante no valido como factura ', 1,0,'C');
    $this->Ln(5);
    
 }

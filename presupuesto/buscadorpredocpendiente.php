@@ -65,6 +65,12 @@ require_once('../conex/conexion.php');
     }
 
 </script>
+	<style>
+    	
+			.container{
+				background-color: pink;
+			}
+    	</style>
 </head>
 
 <body>

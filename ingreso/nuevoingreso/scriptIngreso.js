@@ -1,6 +1,6 @@
 $(document).on("ready",function(){
 	
-	var codProvedor='';
+	
 	var RazonSocial='';
 	var Fecha='';
 	var Total='';	
@@ -21,7 +21,7 @@ $(document).on("ready",function(){
 
 		 	// alert ("Hay Venta:"+pedidoVacio);
 		 	
-			codProveedor= $('#entity-id').val(); 
+		
 			RazonSocial= $('#entity-social').val(); 
 			Fecha= $('#fechap').val(); 
 			Total= $('#totalp').text();
@@ -51,7 +51,7 @@ $(document).on("ready",function(){
 			$.ajax({
 					  type: 'POST',
 					  url: 'grabar.php',
-						data: {codProveedor: codProveedor, RazonSocial: RazonSocial, Fecha: Fecha, Total: Total, valores: valores}, //asi paso el array a php
+						data: {RazonSocial: RazonSocial, Fecha: Fecha, Total: Total, valores: valores}, //asi paso el array a php
 						  	success: function(data){ 
 								$('#respuesta-detalle').empty();
 								$('#respuesta-detalle').append(data);                                                             

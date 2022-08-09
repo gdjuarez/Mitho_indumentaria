@@ -2,7 +2,7 @@
 include("../../conex/conexion.php");
 
 //------Recibo los Datos del ajax----
-$Proveedor= $_POST['codProveedor'];
+
 $RazonSocial=$_POST['RazonSocial'];
 $Fecha=$_POST['Fecha'];
 $Total=$_POST['Total'];
@@ -77,7 +77,7 @@ $sql .= implode( ' , ', $values ).';';//Juntamos los sql's
 	{
 	   
 	   $id_articulo = $detalle[0];
-	   $stock= $detalle[2];
+	   $stock= $detalle[1];
 
 	   //Armo y Junto los sql's
 		$sql_stock = 'UPDATE stockarticulos set Stock = Stock + '.$stock.' where idArticulo = "'.$id_articulo.'"';

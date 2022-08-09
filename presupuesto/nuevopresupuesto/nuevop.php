@@ -31,13 +31,12 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
-    <!--  CSS personalizado -->
-  	<link rel="stylesheet" href="../../stylefondoMadera.css">
+     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">    
 	 <!-- jquery -->
     <script src="lib/jquery.js"></script>  
    	<!-- js personalizado -->
 	<script src="scriptPresupuesto.js"></script> 
+	  <!--  CSS personalizado -->
 	<link rel="stylesheet" href="../../css/stylefondo.css">
 	 
 	<script>
@@ -92,14 +91,18 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 
     })
      </script>
-
-
+	  	<style>    	
+		.container{
+			background-color: pink;
+		}
+	</style>
+	 
 </head>
 
 <body >
 	<header class="sticky-top">
-		<div class='container bg-primary rounded'>	
-			<nav class="navbar navbar-light bg-primary">
+		<div class='container rounded'>	
+			<nav class="navbar navbar-light ">
 	<!-- Navbar content -->
 				<form action="../../menu/menu.php" method="POST">
 					<input name="Enviar" type="submit" value="volver" class="btn btn-dark" />
@@ -112,7 +115,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 		</div>		
 	</header>
 		
-	<div class="container bg-light p-2">
+	<div class="container  bg-light p-2">
 		<div class="row">		
 			<div class="col-md-1"> 	</div> 			  
 		

@@ -19,7 +19,7 @@ require_once('../conex/conexion.php');
 	//echo $fecha_m_d_y;
 
 	// consulta a la tabla 
-	$consulta = ("SELECT idCompra,codProveedor,RazonSocial,date_format(Fecha,'%d-%m-%Y'),Total FROM compras where fecha = '".$fecha_ymd ."' order by idCompra desc "); 
+	$consulta = ("SELECT idCompra,RazonSocial,date_format(Fecha,'%d-%m-%Y'),Total FROM compras where fecha = '".$fecha_ymd ."' order by idCompra desc "); 
 	$sql = mysqli_query($miConexion,$consulta); 
 
 	//echo $consulta;
@@ -36,8 +36,7 @@ $cantidad_registros = mysqli_num_rows($sql);
     
  	$dyn_table= "<table id='Tabla'class='table table-striped'>";
     $dyn_table.="<td>" . "numero" ."</td>";  
-    $dyn_table.="<td>" . "Proveedor" ."</td>";
-    $dyn_table.="<td>" . "Razon Social" ."</td>";  
+    $dyn_table.="<td>" . "Proveedor Razon Soc" ."</td>";   
     $dyn_table.="<td>" . "Fecha" ."</td>";
     $dyn_table.="<td>" . "Importe ". "</td>";
 	
@@ -45,16 +44,14 @@ $cantidad_registros = mysqli_num_rows($sql);
 //lleno dinamicamente la table
 while($row = mysqli_fetch_array($sql,MYSQLI_ASSOC)){ 
     
-    $numero = $row["idCompra"];
-    $Proveedor = $row["codProveedor"];
+    $numero = $row["idCompra"]; 
     $RazonSocial = $row["RazonSocial"];
     $Fecha = $row["date_format(Fecha,'%d-%m-%Y')"];
     $Total = $row["Total"];
 
       
     $dyn_table.="<tr>";
-    $dyn_table.="<td>" ."<input type='submit' name='compra' class='btn btn-info' value='".$numero."'/>"."</td>";
-    $dyn_table.="<td>" . $Proveedor ."</td>";
+    $dyn_table.="<td>" ."<input type='submit' name='compra' class='btn btn-info' value='".$numero."'/>"."</td>";  
     $dyn_table.="<td>" . $RazonSocial ."</td>";
     $dyn_table.="<td>" . $Fecha ."</td>";
     $dyn_table.="<td>" . $Total ."</td>";

@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 	</script>
 		<style>
     	
-			.container1{
+			.container{
 				background-color: pink;
 			}
     	</style>
@@ -95,16 +95,7 @@ while ($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 			</nav>
 		</div>
 	</header>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-						
-			</div>
-			<div class="col">
-				
-			</div>
-		</div>
-	</div>
+	
 
 	<main class="container bg-light p-1">
 		<!--ABM!-->

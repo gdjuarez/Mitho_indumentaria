@@ -41,28 +41,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 	 
 	<script>
       $(function(){
-      
-      $('#form_buscar').submit(function(e){
-        e.preventDefault();
-      })
-
-      $('#buscar').keyup(function(){
-      
-        var buscar = $('#buscar').val();
-       
-        $.ajax({
-          type: 'POST',
-          url: 'buscadorprovee.php',
-          data: {buscar},
-          success: function(resp){
-            if(resp!=""){
-              $('#resultados').html(resp);
-                    
-            }
-          }
-        })
-        
-      })
+   
       //****************************************
 			$('#form_buscarArt').submit(function(e){
 				e.preventDefault();
@@ -91,14 +70,20 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 
     })
      </script>
+	 	<style>
+    	
+		.container{
+			background-color: pink;
+		}
+	</style>
 
 
 </head>
 
 <body >
 	<header class="sticky-top">
-		<div class='container bg-primary rounded'>	
-			<nav class="navbar navbar-light bg-primary">
+		<div class='container rounded'>	
+			<nav class="navbar navbar-light ">
 	<!-- Navbar content -->
 				<form action="../../menu/menu.php" method="POST">
 					<input name="Enviar" type="submit" value="volver" class="btn btn-dark" />
@@ -116,46 +101,9 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 			<div class="col-md-1"> 	</div> 			  
 		
 			<div class="col-md-10 ">
-		<div id="divbuscar">	
+		
 
-		        <!-- ************************* M O D A L ***************************     -->
-		         <!-- Trigger the modal with a button    -->
-		        <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal" id="btnbuscar">Buscar Proveedor</button>
-
-		        <!-- Modal -->
-		        <div class="modal fade" id="myModal" role="dialog">
-		          <div class="modal-dialog modal-lg">
-		          
-		            <!-- Modal content-->
-		            <div class="modal-content">
-		              <div class="modal-header">	                 
-		                
-		                 <form action="" method="post" name="form_buscar" id="form_buscar">
-		                         <div id='buscador'>
-		                            <div class="input-group" >
-		                              <span class="input-group-addon">Buscar:</span>
-		                              <input type="text" class="form-control input-lg" id='buscar' >                
-		                            </div>
-		                         </div>        
-		                   </form> 
-						   <button type="button" class="close" id="cerrarproveedor" data-dismiss="modal">&times;</button>
-		              </div>
-		              <div class="modal-body">
-		               
-		                <div id="resultados">      </div>
-		              </div>
-		              <div class="modal-footer">
-		                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		              </div>
-		            </div>
-		            
-		          </div>
-		        </div>    
-				<!-- ********************************************************************************     -->	
-					<input type="button" value="Proveedor_Nuevo" class="btn btn-secondary" 
-					 onclick="window.open('../../proveedores/proveedores.php', this.target, 'width=800px,height=700px'); return false;">
-
-		</div>
+	
 
 			</form>
  				<br>
@@ -184,30 +132,20 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 					</div>
 
 					<div class="form-row">
+						
 						<div class="col">
 							<div class="input-group">
-							  	<span class="form-control input-sm">CUIL/CUIT</span>
-							  	<input type="text" class="form-control input-sm" id="entity-id" name="entity-id" readonly >
-							</div>  
-						</div>
-						<div class="col">
-							<div class="input-group">
-							  	<span class="form-control input-sm">Razon social</span>
-							  	<input type="text" class="form-control input-sm" id="entity-social" name="entity-social" readonly>
+							  	<span class="form-control input-sm">Razon Social Proveedor</span>
+							  	<input type="text" class="form-control input-sm" id="entity-social" name="entity-social">
 							</div>
 						</div>
-						<div class="col">					
-							<div class="input-group">
-							  	<span class="form-control input-sm">Direccion</span>
-							  	<input type="text" class="form-control input-lg" id="entity-domicilio" name="entity-domicilio" readonly>
-							</div>
-						</div>					
+								
 					</div>
 				</form>
 
 							<hr>
 						
-<!--   arriba nuevo ---------------------  -->
+			<!--   arriba nuevo ---------------------  -->
 				
 					</table>
 					 	</address>
@@ -268,7 +206,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 									<input type="text" id='Productos' value="" class="form-control"readonly/> 
 								</td>
 								<td >  
-									<input type="text" id='Precio' value="1" class="form-control" readonly/>          
+									<input type="text" id='Precio' value="1" class="form-control"/>          
 								</td>								
 								<td>
 								<span id='Importe' class="form-control"readonly>0,00</span>

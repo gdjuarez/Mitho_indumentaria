@@ -39,29 +39,6 @@ include("../conex/conexion.php");
    	<!-- js personalizado -->
     
  
-  <script>
-		$(function(){
-			$('#search').focus();
-			$('#search_form').submit(function(e){
-				e.preventDefault();
-			})
-			$('#search').keyup(function(){
-				var search = $('#search').val();
-				$('#seleccion').val(search);//copia texto para imrimir seleccion
-			
-				$.ajax({
-					type: 'POST',
-					url: 'buscadorpredocpendiente.php',
-					data: {search},
-					success: function(resp){
-						if(resp!=""){
-							$('#resultados').html(resp);
-						}
-					}
-				})
-			})
-		})
-  	</script>
 	 <script>
 		$(function(){
 		
@@ -85,11 +62,17 @@ include("../conex/conexion.php");
 			})
 		})
   	</script>
+		<style>
+    	
+		.container{
+			background-color: pink;
+		}
+	</style>
 </head>
 
 <body>
 	<header class="sticky-top">
-		<div class='container bg-primary rounded'>	
+		<div class='container rounded'>	
 			<nav class="navbar navbar-light ">
 			<!-- Navbar content -->
 				<form action="../menu/menu.php" method="POST">
@@ -114,16 +97,7 @@ include("../conex/conexion.php");
 	<hr>
 	<div class="row">
 		<div class="col-md-6">
-			<div id='titulobuscador'><h5>Buscador por cuit: </h5></div>
-				<div id="buscador" >
-					<div class="row">
-						<div class="col-md-6">
-							<form action="" method="post" name="search_form" id="search_form">
-								<input title= "Ingrese Ciut/Cuil del Cliente" type="text" name="search" id="search" placeholder="Ingrese Cuit/Cuil">
-							</form>
-						</div>							
-					</div>
-				</div>
+			
 		</div>
 		
 		<div class="col-md-6">
