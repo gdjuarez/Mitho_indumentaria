@@ -85,9 +85,9 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 			</div>
 			<div class="col-md-3 border rounded ">
 			<h5 class="text-black">Articulos & Precios</h5>
-				<div class="list-group p-2">			
-					<a href="../barcode/leer_etiqueta.php" class="list-group-item list-group-item-action">Leer Codigo de Barras</a>				
-					<a href="../barcode/crear_etiqueta.php" class="list-group-item list-group-item-action">Crear etiqueta </a>
+				<div class="list-group p-2">	
+					<a href="../barcode/crear_etiqueta.php" class="list-group-item list-group-item-action">Leer y Crear etiqueta </a>		
+					<a href="#" class="list-group-item list-group-item-action">.</a>					
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>			
 					<a href="../precios/precioManager.php" class="list-group-item list-group-item-action">Actualizar Precios</a>	
 					<a href="../articulos/articulos.php" class="list-group-item list-group-item-action">Articulos</a>		

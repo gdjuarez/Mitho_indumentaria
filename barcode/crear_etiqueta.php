@@ -99,7 +99,7 @@ include("../conex/conexion.php");
                 <input name="Enviar" type="submit" value="volver" class="btn btn-dark" />
             </form>
             <a href="#" class="navbar-brand">
-                <h2>Creador de etiqueta con Codigo de Barras</h2>
+                <h2>Leer y Crear de etiqueta con Codigo de Barras</h2>
             </a>
             <form action="../destruir.php" method="POST" class="form-inline">
                 <button class="btn btn-dark sm" type="submit">usuario: <?php echo $_SESSION['user']?>
@@ -127,9 +127,10 @@ include("../conex/conexion.php");
           
         </div>
         <hr>
-        </div>
+       </div>
        
-
+       <div class='container border rounded'>
+    
         <div class="codigo text-center mt-4">
             <input type="text" id="data" placeholder="Ingresa codigo"value="<?php echo $idArticulo ?>" maxlength="13">
             <button type="button" id="generar_barcode" class="btn btn-success">Generar código de barras</button>
