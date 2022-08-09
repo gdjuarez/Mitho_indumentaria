@@ -25,7 +25,7 @@ include("../conex/conexion.php");
         $marca=$res['Marca'];
         $rubro=$res['Rubro'];
 
-        $etiqueta= $descripcion.'-'.$venta.'-'.$marca.'-'.$rubro;
+        $etiqueta= $descripcion.'- $'.$venta.'-'.$marca.'-'.$rubro;
           
       }
 
@@ -133,8 +133,10 @@ include("../conex/conexion.php");
         <div class="codigo text-center mt-4">
             <input type="text" id="data" placeholder="Ingresa codigo"value="<?php echo $idArticulo ?>" maxlength="13">
             <button type="button" id="generar_barcode" class="btn btn-success">Generar código de barras</button>
-            <div id="imagen" class="img mt-4 "> </div>
-            <?php echo $etiqueta?>;
+            <div class=" border rounded">
+            <div id="imagen2" class="img mt-4 "> <?php echo $etiqueta?> </div>
+            <div id="imagen" class="img  "> </div>
+            </div>
            
         </div>
 
