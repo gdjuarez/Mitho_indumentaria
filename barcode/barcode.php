@@ -17,10 +17,12 @@ $code_type = (isset($_GET["codetype"])?$_GET["codetype"]:"code128");
 $print = (isset($_GET["print"])&&$_GET["print"]=='true'?true:false);
 $sizefactor = (isset($_GET["sizefactor"])?$_GET["sizefactor"]:"1");
 
-// This function call can be copied into your project and can be made from anywhere in your code
-barcode( $filepath, $text, $size, $orientation, $code_type, $print, $sizefactor );
 
-function barcode( $filepath="", $text="0", $size="20", $orientation="horizontal", $code_type="code128", $print=false, $SizeFactor=1 ) {
+
+// This function call can be copied into your project and can be made from anywhere in your code
+barcode( $filepath, $text, $size, $orientation, $code_type, $print, $sizefactor);
+
+function barcode( $filepath="", $text="0", $size="20", $orientation="horizontal", $code_type="code128", $print=false, $SizeFactor=1) {
 	$code_string = "";
 	// Translate the $text into barcode the correct $code_type
 	if ( in_array(strtolower($code_type), array("code128", "code128b")) ) {

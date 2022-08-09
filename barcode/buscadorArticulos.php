@@ -26,8 +26,8 @@ $total = mysqli_num_rows($resultado);
         <tr>
             <th>Codigo</th>
             <th>Descripcion</th>
-            <th>Prec. Compra</th>
-            <th>Prec. Venta</th>
+            <th>Compra</th>
+            <th>Venta</th>
             <th>Marca</th>
             <th>Rubro</th>
             <th>Imagen</th>
@@ -49,10 +49,9 @@ while($row = mysqli_fetch_assoc($resultado)) { ?>
             <td><?php echo $row['Imagen']; ?></td>
             <td>
                 <div class="btn-group">
-                    <a href="edit.php?id=<?php echo $row['idArticulo']?>" class="btn btn-secondary"><i
+                    <a href="crear_etiqueta.php?id=<?php echo $row['idArticulo']?>" class="btn btn-secondary"><i
                             class="fas fa-marker"></i> </a>
-                    <a href="delete.php?id=<?php echo $row['idArticulo']?>" class="btn btn-danger"><i
-                            class="far fa-trash-alt"></i> </a>
+                 
                 </div>
             </td>
         </tr>

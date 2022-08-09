@@ -9,6 +9,35 @@ if($_SESSION['logged'] == 'yes')
 	header("Location: ../index.php"); /* Redirección del navegador */
 	}
 
+  // Include database connection
+include("../conex/conexion.php");
+
+// recibo idarticulo, consulto base y relleno inputs
+  if(isset($_GET['id'])){
+
+   $idArticulo=$_GET['id'];
+    //echo $idArticulo;    
+    $consulta = mysqli_query ($miConexion,"SELECT Descripcion,PrecioVenta,Marca,Rubro FROM articulo WHERE idArticulo = '".$idArticulo."'");
+
+    foreach ($consulta as $res) {
+        $descripcion=$res['Descripcion'];
+        $venta=$res['PrecioVenta'];
+        $marca=$res['Marca'];
+        $rubro=$res['Rubro'];
+
+        $etiqueta= $descripcion.'-'.$venta.'-'.$marca.'-'.$rubro;
+          
+      }
+
+  }else{
+    $idArticulo='';
+    $descripcion='';
+    $venta='';
+    $marca='';
+    $rubro='';    
+    $etiqueta='';
+  }
+
 
 ?>
 
@@ -24,6 +53,10 @@ if($_SESSION['logged'] == 'yes')
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        	<!-- fontawesome css -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+   integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 
   <script>
 		$(function() {
@@ -77,10 +110,8 @@ if($_SESSION['logged'] == 'yes')
 </header>
 
 <body>
-    <div class='container rounded'>
-        <div class="col-md-4">
-
-        </div>
+    <div class='container border rounded'>
+        <div class="col-md-4 ">       </div>
         <div class="col-md-4">
             <hr>
             <div id='titulobuscador'>
@@ -93,18 +124,22 @@ if($_SESSION['logged'] == 'yes')
             </form>
 
             <div id="resultados"></div>
-            <hr>
+          
         </div>
         <hr>
+        </div>
+       
+
         <div class="codigo text-center mt-4">
-            <input type="text" id="data" placeholder="Ingresa codigo" maxlength="13">
+            <input type="text" id="data" placeholder="Ingresa codigo"value="<?php echo $idArticulo ?>" maxlength="13">
             <button type="button" id="generar_barcode" class="btn btn-success">Generar código de barras</button>
-            <div id="imagen" class="img mt-4 "></div>
+            <div id="imagen" class="img mt-4 "> </div>
+            <?php echo $etiqueta?>;
+           
         </div>
 
         <script>
-        $("#generar_barcode").click(function() {
-            alert('hola');
+        $("#generar_barcode").click(function() {       
             var data = $("#data").val();
             $("#imagen").html('<img src="barcode.php?text=' + data + '&size=90&codetype=Code39&print=true"/>');
             $("#data").val('');
@@ -112,6 +147,7 @@ if($_SESSION['logged'] == 'yes')
         </script>
         <div class="col-md-4"></div>
     </div>
+      </div>
 
     <!-- Option 1: Bootstrap Bundle (includes Popper) -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
