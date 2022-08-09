@@ -130,6 +130,8 @@ include("../conex/conexion.php");
             </td>
             </div>
             <div class="col-md-3"> </div>
+            <a href="javascript:location.reload()">Recargar</a>
+
         </div>
         <hr>
 

@@ -1,16 +1,8 @@
 <?php
 include('../conex/conexion.php');
 
-$pre='';
-$num='';
 
-$pre=$_POST['pre'];
-$num=$_POST['num'];
-
-//echo $pre;
-//echo $num;
-
-$idArticulo = $pre.$num;
+$idArticulo = strip_tags($_POST['codigo']);
 
 //Recibir
 //$idArticulo = strip_tags($_POST['idArticulo']);

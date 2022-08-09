@@ -42,7 +42,7 @@ include("../conex/conexion.php");
     <!-- js personalizado -->
     <script src="scriptPrecio.js"></script>
 
-    <link rel="stylesheet" href="../stylefondoMadera.css">
+    <link rel="stylesheet" href="../css/stylefondo.css">
 
 
     <script>
@@ -74,12 +74,18 @@ include("../conex/conexion.php");
         })
     })
     </script>
+    	<style>
+    	
+			.container{
+				background-color: pink;
+			}
+    	</style>
 </head>
 
 <body>
     <header class="sticky-top">
-        <div class='container bg-primary rounded'>
-            <nav class="navbar navbar-light bg-primary">
+        <div class='container rounded'>
+            <nav class="navbar navbar-light">
                 <!-- Navbar content -->
                 <form action="../menu/menu.php" method="POST">
                     <input name="Enviar" type="submit" value="volver" class="btn btn-dark" />

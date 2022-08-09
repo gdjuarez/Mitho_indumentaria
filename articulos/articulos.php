@@ -6,8 +6,7 @@ if ($_SESSION['logged'] == 'yes') {
 	echo 'No te has logeado, inicia sesion.';
 	header("Location: ../index.php"); /* Redirección del navegador */
 }
-?>
-<?php
+
 
 include("../conex/conexion.php");
 
@@ -45,7 +44,7 @@ while ($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 
 	<script src="js/jquery.js"></script>
 	<script src="scriptFormArticulo.js"></script>
-	<link rel="stylesheet" href="../stylefondoMadera.css">
+	<link rel="stylesheet" href="../css/stylefondo.css">
 	<link rel="stylesheet" href="css.css">
 
 	<script>
@@ -73,11 +72,17 @@ while ($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 			})
 		})
 	</script>
+		<style>
+    	
+			.container1{
+				background-color: pink;
+			}
+    	</style>
 </head>
 
 <body>
 	<header class="sticky-top">
-		<div class="container bg-primary rounded">
+		<div class="container rounded">
 			<!--Navegador!-->
 			<nav class="navbar navbar-light">
 				<form action="../menu/menu.php" method="POST">
@@ -93,7 +98,7 @@ while ($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<button class='btn-info rounded' id='obtenercodigo' value=''>Obtener codigo</button>				
+						
 			</div>
 			<div class="col">
 				
@@ -128,8 +133,7 @@ while ($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 						<div class="text-center">
 							<div class="row">
 								<div class="col-sm-3">
-									<p>Codigo:
-									<div id='respuesta'></div>		
+								<p>Codigo de Articulo: <input type="text" name="codigo"  class="form-control" value="<?php echo $codigo ?>" maxlength="13" required>
 									<p>
 								</div>
 								<div class="col-sm-9">
@@ -156,7 +160,7 @@ while ($row = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 					</div>
 					<hr style="color: #0056b2;" />
 					<div class="text-center">
-						<input type="submit" name="submit" id="guardar" value="Guardar" class="btn btn-primary mb-2" />
+						<input type="submit" name="submit" value="Guardar" class="btn btn-primary mb-2" />
 					</div>
 				</div>
 			</form>

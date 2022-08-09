@@ -52,7 +52,7 @@ $pdf->SetFont('times', 'B', 10);
 //tabla
 $pdf->Cell(20, 10, '');
 $pdf->SetFillColor(255,255,255);
-$pdf->Cell(20, 10, 'Codigo', 1,0,'C',1);
+$pdf->Cell(30, 10, 'Codigo', 1,0,'C',1);
 $pdf->Cell(70, 10, 'Descripcion', 1,0,'C',1);
 $pdf->Cell(30, 10, 'Rubro', 1,0,'C',1);
 $pdf->Cell(25, 10, 'Precio Compra', 1,0,'C',10);
@@ -81,7 +81,7 @@ while($articulos2 = mysqli_fetch_array($articulos)){
 	$item = $item+1;
 	//Dibujo las celdas
 	$pdf->Cell(20, 8, '');
-	$pdf->Cell(20, 8, '',1,0,'',$f);	
+	$pdf->Cell(30, 8, '',1,0,'',$f);	
 	$pdf->Cell(70, 8, '',1,0,'',$f);
 	$pdf->Cell(30, 8, '',1,0,'',$f);
 	$pdf->Cell(25, 8, '',1,0,'',$f);
@@ -89,7 +89,7 @@ while($articulos2 = mysqli_fetch_array($articulos)){
 	$pdf->Ln(0);
 	//Cargo los valores en las celdas
 	$pdf->Cell(20,8,'');
-	$pdf->Cell(20,8,$articulos2['idArticulo'],0,0,'');
+	$pdf->Cell(30,8,$articulos2['idArticulo'],0,0,'');
 	$pdf->Cell(68,8,$articulos2['Descripcion'],0,0,'');
 	$pdf->Cell(30,8,$articulos2['Rubro'],0,0,'R');
 	$pdf->Cell(20,8,$articulos2['PrecioCompra'],0,0,'R');

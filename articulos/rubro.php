@@ -96,8 +96,7 @@ error_reporting(error_reporting() & ~E_NOTICE);
 						<div class="row">
 							<div class="col-sm-9">
 								<p>Rubro: <input type="text" name="rubro" id="rubro" class="form-control" value="" placeholder="Ingrese un nuevo Rubro (luego click aqui)" required>
-								<p>Prefijo: <input type="text" name="prefijo" id="prefijo" class="form-control" value="" readonly>
-								<p>
+								
 							</div>
 						</div>
 					</div>

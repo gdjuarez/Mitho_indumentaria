@@ -28,7 +28,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
     	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">   
     	<title>Menu</title>  
-  		<link rel="stylesheet" href="../stylefondoMadera.css">
+  		<link rel="stylesheet" href="../css/stylefondo.css">
   		<style>
     		/* Changes an element's color on hover */
     		.list-group-item {
@@ -38,14 +38,17 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
     		    background-color: grey;
     		    color:white;
     		}
+			.container{
+				background-color: pink;
+			}
     	</style>
 	</head>
 
 <body>
 	<p>
 	<header class="sticky-top">
-		<div class='container bg-primary rounded'>	
-			<nav class="navbar navbar-light bg-primary">
+		<div class='container  rounded'>	
+			<nav class="navbar navbar-light">
 				<!-- Navbar content -->
 				<form action="#" method="POST">
 					<input name="Enviar" type="submit" value="usuario: <?php echo $_SESSION['user']?> " class="btn btn-dark" />
@@ -58,10 +61,10 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 		</div>		
 	</header>
 		
-	<div class="container bg-light">	
+	<div class="container ">	
         <div class="row">  
-	        <div class="col-md-3 bg-primary border rounded">
-				<h5 class="text-white">Presupuesto</h5>
+	        <div class="col-md-3  border rounded">
+				<h5 class="text-black">Presupuesto</h5>
 				<div class="list-group p-2">
 					<a href="../presupuesto/nuevopresupuesto/nuevop.php" class="list-group-item list-group-item-action">Nuevo Presupuesto</a>
 					<a href="../presupuesto/buscadorpresupuesto.php" class="list-group-item list-group-item-action">Buscar Presupuesto</a>
@@ -70,8 +73,8 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 					<a href="../presupuesto/panular.php" class="list-group-item list-group-item-action">Anular Presupuesto</a>
 				 </div>
 			</div>
-			<div class="col-md-3 border rounded bg-primary">
-				<h5 class="text-white">Ingreso</h5>
+			<div class="col-md-3 border rounded ">
+				<h5 class="text-black">Ingreso</h5>
 				<div class="list-group p-2">
 				<a href="../ingreso/nuevoingreso/nuevo.php" class="list-group-item list-group-item-action">Nuevo Ingreso</a>
 				<a href="#" class="list-group-item list-group-item-action text-white">.</a>			
@@ -80,47 +83,30 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>					
 		     	</div>
 			</div>
-			<div class="col-md-3 border rounded bg-primary">
-			<h5 class="text-white">Articulos & Precios</h5>
+			<div class="col-md-3 border rounded ">
+			<h5 class="text-black">Articulos & Precios</h5>
 				<div class="list-group p-2">			
-					<a href="../articulos/articulos.php" class="list-group-item list-group-item-action">Articulos</a>
-					<a href="#" class="list-group-item list-group-item-action text-white">.</a>				
-					<a href="../precios/precioManager.php" class="list-group-item list-group-item-action">Actualizar Precios</a>
-					<a href="#" class="list-group-item list-group-item-action text-white">.</a>				
+					<a href="#" class="list-group-item list-group-item-action">Leer Codigo de Barras</a>				
+					<a href="#" class="list-group-item list-group-item-action">Crear etiqueta </a>
+					<a href="#" class="list-group-item list-group-item-action text-white">.</a>			
+					<a href="../precios/precioManager.php" class="list-group-item list-group-item-action">Actualizar Precios</a>	
+					<a href="../articulos/articulos.php" class="list-group-item list-group-item-action">Articulos</a>		
 					
 		     	</div>
 	      	</div>
-			  <div class="col-md-3 border rounded bg-primary">
-			<h5 class="text-white">Inventario</h5>
+			  <div class="col-md-3 border rounded">
+			<h5 class="text-black">Inventario</h5>
 				<div class="list-group p-2">				
 				<a href="../stock/StockManager.php" class="list-group-item list-group-item-action">Stock Manager</a>
 								
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>						
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>		
 					<a href="#" class="list-group-item list-group-item-action text-white">.</a>			
+					<a href="../usuarios/registroUsuarios.php" class="list-group-item list-group-item-action">Usuarios</a>
 		     	</div>
 	      	</div>
 		</div>
-		<div class="row">  
-	        <div class="col-md-4 border rounded bg-primary">
-				<h5 class="text-white">Clientes</h5>
-				<div class="list-group p-2">
-					<a href="../clientes/clientes.php" class="list-group-item list-group-item-action">Clientes</a>				
-				</div>
-			</div>			
-			<div class="col-md-4 border rounded bg-primary">
-				<h5 class="text-white">Proveedores</h5>
-				<div class="list-group p-2">			
-					<a href="../proveedores/proveedores.php" class="list-group-item list-group-item-action">Proveedores</a>				
-		     	</div>
-			</div>
-			<div class="col-md-4 border rounded bg-primary">
-				<h5 class="text-white">Usuarios</h5>
-				<div class="list-group p-2">
-				   <a href="../usuarios/registroUsuarios.php" class="list-group-item list-group-item-action">Usuarios</a>
-		     	</div>
-	      	</div>
-		</div>
+		
 		<hr>
 		<footer>
             <small>&copy; Copyright GDJuarez 2022</small>

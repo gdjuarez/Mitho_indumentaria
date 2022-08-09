@@ -111,7 +111,7 @@ $dyn_table.="</tr></table>";
         </div>
         <hr>
         <footer>
-            <small>&copy; Copyright 2021</small>
+            <small>&copy; Copyright GDJuarez 2022</small>
         </footer>
     </div>
 

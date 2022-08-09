@@ -45,7 +45,8 @@ $(document).on("ready", function () {
               });
        
 
-        alert ("Stock Procesado. . .\n click para continuar")
+        alert ("Stock Procesado. . .\n click para continuar");
+        
         location.reload();
 
     })

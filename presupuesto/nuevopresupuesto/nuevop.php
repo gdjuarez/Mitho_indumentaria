@@ -38,6 +38,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
     <script src="lib/jquery.js"></script>  
    	<!-- js personalizado -->
 	<script src="scriptPresupuesto.js"></script> 
+	<link rel="stylesheet" href="../../css/stylefondo.css">
 	 
 	<script>
       $(function(){
@@ -116,44 +117,10 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 			<div class="col-md-1"> 	</div> 			  
 		
 			<div class="col-md-10 ">
-		<div id="divbuscarCliente">	
+		<div id="divbuscarCliente" >	
 
-		        <!-- ************************* M O D A L ***************************     -->
-		         <!-- Trigger the modal with a button    -->
-		        <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal" id="btnbuscar">Buscar Cliente</button>
-
-		        <!-- Modal -->
-		        <div class="modal fade" id="myModal" role="dialog">
-		          <div class="modal-dialog modal-lg">
-		          
-		            <!-- Modal content-->
-		            <div class="modal-content">
-		              <div class="modal-header">	                 
-		                
-		                 <form action="" method="post" name="form_buscar" id="form_buscar">
-		                         <div id='buscador'>
-		                            <div class="input-group" >
-		                              <span class="input-group-addon">Buscar:</span>
-		                              <input type="text" class="form-control input-lg" id='buscar' >                
-		                            </div>
-		                         </div>        
-		                   </form> 
-						   <button type="button" class="close" id="cerrarcliente" data-dismiss="modal">&times;</button>
-		              </div>
-		              <div class="modal-body">
-		               
-		                <div id="resultados">      </div>
-		              </div>
-		              <div class="modal-footer">
-		                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		              </div>
-		            </div>
-		            
-		          </div>
-		        </div>    
-				<!-- ********************************************************************************     -->	
-					<input type="button" id="cliente_nuevo" value="Cliente_Nuevo" class="btn btn-secondary" 
-					 onclick="window.open('../../clientes/clientes.php', this.target, 'width=800px,height=700px'); return false;">
+		       
+				
 
 		</div>
 
@@ -190,7 +157,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 						<div class="col-12">
 							<div class="input-group">
 							  	<span class=" ">Razon social : </span>
-							  	<input type="text"  maxlength="90" class="form-control input-lg  text-center text-body" id="entity-social" name="entity-social"   placeholder="si no es cliente puede ingresar: (Apellido - Domicilio -Telefono)"  >
+							  	<input type="text"  maxlength="90" class="form-control input-lg  text-center text-body" id="entity-social" name="entity-social"   placeholder="puede ingresar: (Apellido - Domicilio -Telefono)"  >
 							</div>
 						</div>
 					</div>

@@ -9,21 +9,24 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <link rel="stylesheet" href="stylefondoMadera.css">
+        <link rel="stylesheet" href="css/stylefondo.css">
         <title>Inicio</title>
     </head>
 
     <body>
         <p>
-        <div class="container bg-light">              
+        <div class="container bg-light border">              
             <div class="row bg-dark rounded"> 
-                <div class="col-12  "><h2 class="text-center text-white">MITHO - Indumentaria</h2></div>           
+                <div class="col-12  "><h2 class="text-center text-white">Sistema online</h2></div>           
             </div>  
             <div class="row m-5 "> 
+            <div class="col-md-2">   
+                         
+                </div>
                 <div class="col-md-4">   
                     <img class=" img-fluid center-block" src="img/mitho_logo.jpeg" >          
                 </div>
-                <div class="col-md-4 border rounded border-dark">
+                <div class="col-md-4 border rounded border-dark text-center">
                     <form class="form-inline" action="conex/login.php" method="post">
                         <div class="form-group">
                             <p>
@@ -48,9 +51,10 @@
                         </div>
                     </form>                                   
                 </div>                
-                <div class="col-md-4">
+                <div class="col-md-2">
                    
                 </div>
+                
             </div>
             <HR>
             <footer>

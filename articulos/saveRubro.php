@@ -19,11 +19,7 @@ if ((isset($_POST['rubro']) && empty($_POST['rubro']))) {
 
       $grabar = mysqli_query($miConexion, $sql);
 
-      $sql2 = 'INSERT INTO contador_articulos (prefijo,numeral) values ("' . $prefijo . '","0000")';
-
-      $grabar2 = mysqli_query($miConexion, $sql2);
-
-
+    
       if ($grabar) {
             echo '<script language=javascript>
           alert("Rubro registrado.")
