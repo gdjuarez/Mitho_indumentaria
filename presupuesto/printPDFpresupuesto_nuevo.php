@@ -54,17 +54,16 @@ while($misdatos2 = mysqli_fetch_array($misdatos)){
     $Email=$misdatos2['Email'];
 	}
 //Obtengo datos del pedido
-$pedido = mysqli_query($miConexion,"SELECT p.numero,p.cliente, p.RazonSocial, p.fecha , p.Total,c.Domicilio FROM presupuesto p
- left join cliente c on c.codcliente= p.cliente where numero= $nPed");
+$pedido = mysqli_query($miConexion,"SELECT p.numero, p.RazonSocial, p.fecha , p.Total FROM presupuesto p
+where numero= $nPed");
 $item = 0;
 while($pedido2 = mysqli_fetch_array($pedido)){
-	$item = $item+1;
-    $nPedido= $pedido2['numero'];
-    $cliente=$pedido2['cliente'];
+	
+    $nPedido= $pedido2['numero'];   
     $RazonSocialCliente=$pedido2['RazonSocial'];
     $fecha=$pedido2['fecha'];
     $total= $pedido2['Total'];
-    $Domicilio=$pedido2['Domicilio'];
+    
 }
 $pdf->SetFont('arial', 'B', 14);
 $pdf->Cell(190, 10, 'Original', 1,0,'C');
@@ -81,7 +80,7 @@ $pdf->Cell(16, 12, '',1,0,'C',1);
 
 $pdf->Ln(0);
 //declro y ubico imagen
-$image1 = "../img/mmLogo.jpg";
+$image1 = "../img/mitho_logo.jpeg";
 $pdf->Image($image1 , 12 ,21, 40 , 20,'jpg');
 //primera linea
 $pdf->Cell(190, 10, $tipoFactura, 0 ,0,'C');
@@ -97,11 +96,11 @@ $pdf->SetFont('Times', '', 12);
 $pdf->Cell(105, 10, '',0);
 $pdf->Cell(85, 10, '', 0);
 $pdf->Ln(7);
-$pdf->Cell (105, 10,utf8_decode('                                          Avda 2 Nº 3175 esq 107'), 0);
+$pdf->Cell (105, 10,utf8_decode('                                          calle  Nº  '), 0);
 $pdf->Cell(85, 10,'     Fecha de emision:'.date("d/m/Y", strtotime($fecha)), 0);
 $pdf->Ln(7);
-$pdf->Cell(105, 10, '       Tel.: (02324) 422410  6600 Mercedes (Bs. As.)',0);
-$pdf->Cell(85, 10, '  IVA RESPONSABLE INSCRIPTO', 0);
+$pdf->Cell(105, 10, '       Tel.: (02324)    6600 Mercedes (Bs. As.)',0);
+$pdf->Cell(85, 10, '  ', 0);
 $pdf->Ln(10);
 
 //tabla encabezado
@@ -111,7 +110,7 @@ $pdf->Ln(0);
 $pdf->Cell(5, 10, '', 0);
 $pdf->Cell(10, 10, 'Cuil:', 0);
 $pdf->SetFont('times', '', 12);
-$pdf->Cell(35, 10, $cliente, 0); //85,10
+$pdf->Cell(35, 10, '', 0); //85,10
 $pdf->SetFont('times', 'B', 12);
 $pdf->Cell(30, 10, 'Razon Social:  ', 0);//24,10
 $pdf->SetFont('times', '', 12);
@@ -121,7 +120,7 @@ $pdf->Ln(5);
 $pdf->Cell(5, 10, '', 0);
 $pdf->Cell(20, 10, 'domicilio', 0); //'domicilio'
 $pdf->SetFont('times', '', 12);
-$pdf->Cell(120, 10, utf8_decode($Domicilio), 0);
+$pdf->Cell(120, 10, '', 0);
 $pdf->SetFont('times', 'B', 12);
 $pdf->Ln(12);
 $pdf->Cell(190, 210, '',1);
