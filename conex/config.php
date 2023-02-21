@@ -5,7 +5,7 @@
     $db_host="localhost";
     $db_nombre="";
     $db_usuario="";
-    $db_contra="Lau20526866&";
+    $db_contra="";
  */
 
  // LOCAL
